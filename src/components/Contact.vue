@@ -62,7 +62,12 @@ const sendEmail = async () => {
                         <div class="divider"></div>
 
                     </div>
-                    <button>Mande uma mensagem!</button>
+                    <a
+                        href="https://api.whatsapp.com/send/?phone=5544999335731&text=Ol%C3%A1%2C+quero+saber+mais+sobre+a+seus+servicos.&type=phone_number&app_absent=0"
+                        target="_blank"
+                    >
+                        <button>Mande uma mensagem!</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -188,5 +193,9 @@ const sendEmail = async () => {
     font-family: var(--principal-font);
     font-size: 16px;
     font-weight: 300;
+}
+
+a {
+    text-decoration: none;
 }
 </style>

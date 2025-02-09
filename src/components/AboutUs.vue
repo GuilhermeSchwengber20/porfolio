@@ -1,12 +1,13 @@
 <script lang="ts" setup>
+import perfil from "../../assets/images/perfil-personagem.png"
+
 </script>
 <template>
     <div class="container-about" id="session-aboutus">
         <div class="container-text">
             <h2>Sobre Mim</h2>
             <p>
-                Olá! Sou o Guilherme, desenvolvedor web com mais de 2 anos de experiência. Ao longo da minha carreira, tenho me especializado em front-end com TypeScript, Vue.js e Nuxt.js, além de atuar no back-end utilizando Node.js, Express e MySQL. Tenho também sólidos conhecimentos em SQL e bancos de dados como PostgreSQL, Firebird e outros.
-
+                Olá! Sou o Guilherme, desenvolvedor web com mais de <span class="purple">2 anos de experiência.</span> Ao longo da minha carreira, tenho me especializado em front-end com <span class="purple">TypeScript, Vue.js e Nuxt.js</span>, além de atuar no back-end utilizando <span class="purple">Node.js, Express e MySQL</span>. Tenho também sólidos conhecimentos em SQL e bancos de dados como PostgreSQL, Firebird e outros.
                 Gosto de enfrentar desafios e criar novas oportunidades através da tecnologia, sempre buscando entregar soluções eficientes e escaláveis. Dê uma olhada nos meus projetos e vamos conversar sobre como posso ajudar a transformar sua ideia em realidade.
             </p>
             <div class="container-button">
@@ -14,7 +15,9 @@
             </div>
         </div>
         <div class="container-image">
-            <div class="image"></div>
+            <div class="image">
+                <img :src="perfil" />
+            </div>
         </div>
     </div>
 </template>
@@ -76,9 +79,19 @@
 }
 
 .container-image .image {
-    border: 1px solid #FFF;
+    max-width: 550px;
     width: 100%;
-    height: 100%;
+    height: 350px;
+    overflow: hidden;
 }
 
+.container-image .image img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.purple {
+    color: var(--background-buttons);
+}
 </style>

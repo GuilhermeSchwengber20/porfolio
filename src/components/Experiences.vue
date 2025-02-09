@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+import bdsLogo from "../../assets/images/logo-bds.png";
+import orcamenteiroLogo from "../../assets/images/logo-orcamenteiro.png";
+</script>
 <template>
     <div class="container-experiences" id="session-experiences">
         <div class="container-text">
@@ -6,41 +10,61 @@
         <div class="content-experiences">
             <div class="card-experiences">
                 <div class="container-image">
-                    <div class="image"></div>
+                    <div class="image">
+                        <img :src="bdsLogo" />
+                    </div>
                 </div>
                 <div class="container-descriptions">
                     <div class="title">
-                        <h3>BDS - Informática</h3>
+                        <h3>BDS - Informática - Programador</h3>
                     </div>
                     <div class="time-work">
                         <span>jan. 2023 - Até o momento</span>
                     </div>
                     <div class="job-description">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi incidunt nam consectetur suscipit aliquid sequi omnis veritatis, similique rem architecto asperiores eaque optio placeat doloribus, dolore ut inventore. Eveniet, minima.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi incidunt nam consectetur suscipit aliquid sequi omnis veritatis, similique rem architecto asperiores eaque optio placeat doloribus, dolore ut inventore. Eveniet, minima.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi incidunt nam consectetur suscipit aliquid sequi omnis veritatis, similique rem architecto asperiores eaque optio placeat doloribus, dolore ut inventore. Eveniet, minima.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi incidunt nam consectetur suscipit aliquid sequi omnis veritatis, similique rem architecto asperiores eaque optio placeat doloribus, dolore ut inventore. Eveniet, minima.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi incidunt nam consectetur suscipit aliquid sequi omnis veritatis, similique rem architecto asperiores eaque optio placeat doloribus, dolore ut inventore. Eveniet, minima.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi incidunt nam consectetur suscipit aliquid sequi omnis veritatis, similique rem architecto asperiores eaque optio placeat doloribus, dolore ut inventore. Eveniet, minima.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi incidunt nam consectetur suscipit aliquid sequi omnis veritatis, similique rem architecto asperiores eaque optio placeat doloribus, dolore ut inventore. Eveniet, minima.
+                            Atuo no desenvolvimento de um sistema ERP web, colaborando com a equipe e utilizando Vue.js, Node.js e TypeScript no frontend, além de implementar rotas e dar manutenção em uma API com Java e Spring Boot no backend. Planejo e implemento soluções eficientes, mantendo o código organizado e aprimorando constantemente a usabilidade com base no feedback dos usuários. Também sou responsável pela manutenção e atualização do sistema, garantindo estabilidade e novas funcionalidades. Meu trabalho resultou em uma navegação mais intuitiva, redução de bugs e um ambiente de equipe mais colaborativo, impulsionando a competitividade da empresa.
                         </p>
                     </div>
                 </div>
             </div>
             <div class="card-experiences">
                 <div class="container-image">
-                    <div class="image"></div>
+                    <div class="image">
+                        <img :src="bdsLogo" />
+                    </div>
                 </div>
                 <div class="container-descriptions">
                     <div class="title">
-                        <h3>BDS - Informática</h3>
+                        <h3>BDS - Informática - Estágio</h3>
+                    </div>
+                    <div class="time-work">
+                        <span>jun. 2022 - jan. 2023</span>
+                    </div>
+                    <div class="job-description">
+                        <p>
+                            Atuei no desenvolvimento de interfaces responsivas com Vue.js, contribuindo para a otimização de desempenho e aplicação de práticas modernas de front-end. Participo de discussões e reuniões, trazendo novas perspectivas e colaborando na resolução de problemas técnicos. Além disso, implemento melhorias com base em feedbacks e análises críticas, garantindo interfaces mais eficientes. Também auxilio na criação de descritivos de mercado para vagas da área e aprimoro minhas habilidades através de projetos do mundo real. Meu comprometimento com o aprendizado contínuo e a adaptação rápida ao ambiente profissional impulsionam meu crescimento e contribuição para a equipe.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-experiences">
+                <div class="container-image">
+                    <div class="image">
+                        <img :src="orcamenteiroLogo"/>
+                    </div>
+                </div>
+                <div class="container-descriptions">
+                    <div class="title">
+                        <h3>Orçamenteiro Solar - Freelance</h3>
                     </div>
                     <div class="time-work">
                         <span>jan. 2023 - Até o momento</span>
                     </div>
                     <div class="job-description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi incidunt nam consectetur suscipit aliquid sequi omnis veritatis, similique rem architecto asperiores eaque optio placeat doloribus, dolore ut inventore. Eveniet, minima.</p>
+                        <p>
+                            Desenvolvi funcionalidades inovadoras para um sistema web de orçamentos em sistemas fotovoltaicos, incluindo relatórios detalhados para auxiliar vendedores na análise de dados e tomada de decisões. Contribuí para a implementação de um kanban integrado, melhorando a eficiência, e para a integração de um módulo de CRM ao sistema. Além disso, criei propostas dinâmicas em formato PDF e landing page, permitindo que os usuários as configurem diretamente no sistema. Participei ativamente de discussões para identificar e implementar soluções inovadoras, garantindo melhorias na usabilidade e na experiência do usuário. Com flexibilidade para adaptar-me às necessidades do projeto, assegurei a entrega pontual de funcionalidades de alta qualidade.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -88,9 +112,17 @@
 
 .container-image .image{
     width: 100%;
+    max-width: 250px;
     height: 100%;
-    border: 1px solid #FFF;
+    overflow: hidden;
 }
+
+.container-image .image img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 .container-descriptions{
     display: flex;
     flex-direction: column;

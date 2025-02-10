@@ -1,27 +1,41 @@
 <script lang="ts" setup>
 import { Github, Linkedin, Send } from "lucide-vue-next";
+import { useRoute } from "vue-router";
+const route = useRoute();
+console.log(route);
 </script>
 
 <template>
     <div class="container-header">
-        <div class="logo-container">
+        <NuxtLink
+            class="logo-container"
+            to="/"
+        >
             <span>GUILHERME</span>
             <span style="color: var(--background-buttons)">SCHWENGBER</span>
+
+        </NuxtLink>
+        <div >
+            
         </div>
         <nav class="nav-links">
-            <li>
+            <li v-if="route.name !== 'blog'">
                 <a href="#session-aboutus">SOBRE MIM</a>
             </li>
-            <li>
+            <li v-if="route.name !== 'blog'">
                 <a href="#session-experiences">EXPERIÊNCIAS</a>
             </li>
-            <li>
+            <li v-if="route.name !== 'blog'">
                 <a href="#session-projects">PROJETOS</a>
             </li>
-            <li>
+            <li v-if="route.name !== 'blog'">
                 <a href="#session-contact">CONTATO</a>
             </li>
-            <li>BLOG</li>
+            <li>
+                <NuxtLink to="/blog">
+                    BLOG
+                </NuxtLink>
+            </li>
         </nav>
         <div class="contacts">
             <a 
@@ -72,6 +86,7 @@ import { Github, Linkedin, Send } from "lucide-vue-next";
     font-weight: bold;
     font-size: 20px;
     background: transparent;
+    text-decoration: none;
 }
 
 .logo-container span {

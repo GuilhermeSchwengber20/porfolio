@@ -301,7 +301,6 @@ import { MoveRight } from 'lucide-vue-next';
 .badge {
     padding: 5px 10px;
     border-radius: 5px;
-    
 }
 
 .blue{

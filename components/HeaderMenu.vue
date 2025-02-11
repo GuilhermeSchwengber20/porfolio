@@ -101,7 +101,7 @@ const toggleMenu = () => {
     justify-content: space-between;
     height: 80px;
     width: 100%;  /* Deixe o container ocupar 100% da largura */
-    max-width: 1200px;  /* Tamanho máximo para evitar que o menu fique muito largo */
+    max-width: 1100px;  /* Tamanho máximo para evitar que o menu fique muito largo */
     margin: 0 auto;  /* Centraliza o container */
     position: fixed;
     background: rgba(255, 255, 255, 0.06);

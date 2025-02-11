@@ -9,7 +9,10 @@ const { data: post } = await useAsyncData(route.path, () => {
         <HeaderMenu />
         <div class="container-post">
             <article class="markdown">
-                <ContentRenderer :value="post" v-if="post"/>
+                <ContentRenderer
+                    :value="post"
+                    v-if="post"
+                />
             </article>
         </div>
     </div>
@@ -23,7 +26,12 @@ const { data: post } = await useAsyncData(route.path, () => {
 
 .container-post {
     height: 100%;
-    padding-top: 120px;
+    padding-top: 90px;
 }
 
+@media (max-width: 425px) {
+    .container-page {
+        padding: 20px 10px;
+    }
+}
 </style>

@@ -28,7 +28,6 @@ console.log(post);
 .container-post {
     height: 100%;
     padding-top: 120px;
-    overflow-y: auto;
 }
 
 </style>

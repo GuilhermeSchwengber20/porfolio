@@ -34,24 +34,31 @@ const sendEmail = async () => {
         <div class="container-form">
             <div class="content-form">
                 <div class="container-input">
-                    <label>
+                    <label for="name">
                         Nome
                     </label>
-                    <input v-model="nome" type="text"/>
+                    <input
+                        v-model="nome"
+                        type="text"
+                        id="name"
+                    />
                 </div>
                 <div class="container-input">
-                    <label>
+                    <label for="contact">
                         Contato
                     </label>
                     <input
                         v-model="email"
                         type="text"
+                        id="contact"
                         placeholder="contato.guilhermeschwengber@gmail.com"
                     />
                 </div>
                 <div class="container-input">
-                    <label>Escreva uma mensagem</label>
-                    <textarea v-model="description">
+                    <label for="description">
+                        Escreva uma mensagem
+                    </label>
+                    <textarea v-model="description" id="description">
                     </textarea>
                 </div>
                 <div class="container-buttons">
@@ -65,6 +72,7 @@ const sendEmail = async () => {
                     <a
                         href="https://api.whatsapp.com/send/?phone=5544999335731&text=Ol%C3%A1%2C+quero+saber+mais+sobre+a+seus+servicos.&type=phone_number&app_absent=0"
                         target="_blank"
+                        aria-label="Envie uma mensagem para saber mais dos serviços e produtos"
                     >
                         <button>Mande uma mensagem!</button>
                     </a>

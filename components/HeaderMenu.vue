@@ -33,62 +33,65 @@ const toggleMenu = () => {
             <Menu @click="toggleMenu" />
         </div>
         <nav class="nav-links">
-            <li v-if="route.name !== 'Blog'">
-                <a href="#session-aboutus">SOBRE MIM</a>
-            </li>
-            <li v-if="route.name !== 'Blog'">
-                <a href="#session-experiences">EXPERIÊNCIAS</a>
-            </li>
-            <li v-if="route.name !== 'Blog'">
-                <a href="#session-projects">PROJETOS</a>
-            </li>
-            <li v-if="route.name !== 'Blog'">
-                <a href="#session-contact">CONTATO</a>
-            </li>
-            <li v-if="route.name !== 'Blog'">
+            <a v-if="route.name !== 'Blog'" href="#session-aboutus">
+                SOBRE MIM
+            </a>
+            <a v-if="route.name !== 'Blog'" href="#session-experiences">
+                EXPERIÊNCIAS
+            </a>
+            <a v-if="route.name !== 'Blog'" href="#session-projects">
+                PROJETOS
+            </a>
+            <a v-if="route.name !== 'Blog'" href="#session-contact">
+                CONTATO
+            </a>
+            <a v-if="route.name !== 'Blog'">
                 <NuxtLink to="/blog">
                     BLOG
                 </NuxtLink>
-            </li>
+            </a>
         </nav>
         <div class="contacts">
             <a 
                 href="https://github.com/GuilhermeSchwengber20"
+                aria-label="Acesse o github e conheça um pouco mais dos meus projetos e projetos open source que já participei"
                 target="_blank"
             >
                 <Github />
             </a>
             <a 
                 href="https://www.linkedin.com/in/guilherme-schwengber/"
+                aria-label="Acesse o linkedin e conheça um pouco mais das minhas experiências, e pessoas que já trabalhei"
                 target="_blank"
             >
                 <Linkedin />
             </a>
             <a 
                 href="https://api.whatsapp.com/send/?phone=5544999335731&text=Ol%C3%A1%2C+quero+saber+mais+sobre+a+seus+servicos.&type=phone_number&app_absent=0"
+                aria-label="Envie uma mensagem para saber mais sobre os valores, produtos e serviços"
                 target="_blank"
             >
                 <Send />
             </a>
         </div>
         <div class="container-menu-mobile" ref="menuMobile">
-            <li v-if="route.name !== 'Blog'">
-                <a href="#session-aboutus">SOBRE MIM</a>
-            </li>
-            <li v-if="route.name !== 'Blog'">
-                <a href="#session-experiences">EXPERIÊNCIAS</a>
-            </li>
-            <li v-if="route.name !== 'Blog'">
-                <a href="#session-projects">PROJETOS</a>
-            </li>
-            <li v-if="route.name !== 'Blog'">
-                <a href="#session-contact">CONTATO</a>
-            </li>
-            <li v-if="route.name !== 'Blog'">
+            <a v-if="route.name !== 'Blog'" href="#session-aboutus">
+                SOBRE MIM
+            </a>
+            <a v-if="route.name !== 'Blog'" href="#session-experiences">
+                EXPERIÊNCIAS
+            </a>
+            <a v-if="route.name !== 'Blog'" href="#session-projects">
+                PROJETOS
+            </a>
+            <a v-if="route.name !== 'Blog'" href="#session-contact">
+                CONTATO
+            </a>
+            <a v-if="route.name !== 'Blog'">
                 <NuxtLink to="/blog">
                     BLOG
                 </NuxtLink>
-            </li>
+            </a>
         </div>
     </div>
 </template>
@@ -144,17 +147,16 @@ const toggleMenu = () => {
     user-select: none;
 }
 
-.nav-links li{
-    list-style: none;
+.nav-links a{
     background: transparent;
     transition: color .2s ease-in;
-}
-.nav-links li a{
     text-decoration: none;
+    list-style: none;
     color: var(--text-principal)
 }
 
-.nav-links li a:hover{
+
+.nav-links a:hover{
     color: var(--background-buttons);
 }
 .contacts {

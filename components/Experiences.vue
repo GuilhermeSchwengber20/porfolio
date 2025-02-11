@@ -11,7 +11,10 @@ import orcamenteiroLogo from "../../assets/images/logo-orcamenteiro.png";
             <div class="card-experiences">
                 <div class="container-image">
                     <div class="image">
-                        <img :src="bdsLogo" />
+                        <img
+                            :src="bdsLogo"
+                            alt="Logo da empresa BDS informática"
+                        />
                     </div>
                 </div>
                 <div class="container-descriptions">
@@ -31,7 +34,10 @@ import orcamenteiroLogo from "../../assets/images/logo-orcamenteiro.png";
             <div class="card-experiences">
                 <div class="container-image">
                     <div class="image">
-                        <img :src="bdsLogo" />
+                        <img
+                            :src="bdsLogo"
+                            alt="Logo da empresa BDS informática"
+                        />
                     </div>
                 </div>
                 <div class="container-descriptions">
@@ -51,7 +57,10 @@ import orcamenteiroLogo from "../../assets/images/logo-orcamenteiro.png";
             <div class="card-experiences">
                 <div class="container-image">
                     <div class="image">
-                        <img :src="orcamenteiroLogo"/>
+                        <img
+                            :src="orcamenteiroLogo"
+                            alt="Logo da empresa orçamenteiro solar"
+                        />
                     </div>
                 </div>
                 <div class="container-descriptions">

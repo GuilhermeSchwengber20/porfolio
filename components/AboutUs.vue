@@ -7,16 +7,16 @@ import perfil from "../../assets/images/perfil-personagem.png"
         <div class="container-text">
             <h2>Sobre Mim</h2>
             <p>
-                Olá! Sou o Guilherme, desenvolvedor web com mais de <span class="purple">2 anos de experiência.</span> Ao longo da minha carreira, tenho me especializado em front-end com <span class="purple">TypeScript, Vue.js e Nuxt.js</span>, além de atuar no back-end utilizando <span class="purple">Node.js, Express e MySQL</span>. Tenho também sólidos conhecimentos em SQL e bancos de dados como PostgreSQL, Firebird e outros.
+                Olá! Sou o Guilherme, desenvolvedor web com mais de <span class="bold">2 anos de experiência.</span> Ao longo da minha carreira, tenho me especializado em front-end com <span class="bold">TypeScript, Vue.js e Nuxt.js</span>, além de atuar no back-end utilizando <span class="bold">Node.js, Express e MySQL</span>. Tenho também sólidos conhecimentos em SQL e bancos de dados como PostgreSQL, Firebird e outros.
                 Gosto de enfrentar desafios e criar novas oportunidades através da tecnologia, sempre buscando entregar soluções eficientes e escaláveis. Dê uma olhada nos meus projetos e vamos conversar sobre como posso ajudar a transformar sua ideia em realidade.
             </p>
             <div class="container-button">
-                <button>Saiba Mais</button>
+                <button id="btn-saiba-mais">Saiba Mais</button>
             </div>
         </div>
         <div class="container-image">
             <div class="image">
-                <img :src="perfil" />
+                <img :src="perfil" alt="Foto de Perfil de Guilherme Schwengber"/>
             </div>
         </div>
     </div>
@@ -91,8 +91,9 @@ import perfil from "../../assets/images/perfil-personagem.png"
     display: block;
 }
 
-.purple {
-    color: var(--background-buttons);
+.bold {
+    color: #FFF;
+    font-weight: bold;
 }
 
 @media (max-width: 1100px) {

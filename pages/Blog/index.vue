@@ -4,7 +4,10 @@ import { MoveRight } from 'lucide-vue-next';
 
 useHead({
     title: "Meu blog pessoal",
-    meta: generateMeta()
+    meta: generateMeta(),
+    htmlAttrs: {
+        lang: 'pt-BR'
+    },
 });
 
 const { data: posts } = await useAsyncData("posts", () => {

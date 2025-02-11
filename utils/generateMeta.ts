@@ -4,8 +4,8 @@ const defaultMeta = {
     description: 'Bem vindo(a) ao meu Blog pessoal',
     siteName: 'Guilherme Schwengber Blog',
     contentType: 'website',
-    url: 'http://localhost:3000/blog',
-    socialBanner: 'https://www.meudominio.com/banner_social_media.jpg',
+    url: 'https://porfolio-five-murex.vercel.app/blog',
+    socialBanner: 'https://www.meudominio.com/banner_social_media.jpg', //fazer isso depois
     bannerWidth: '740',
     bannerHeight: '300',
     twitterCardType: 'summary_large_image',

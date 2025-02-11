@@ -1,8 +1,22 @@
 <script lang="ts" setup>
-import { Github, Linkedin, Send } from "lucide-vue-next";
+import { Github, Linkedin, Send, Menu } from "lucide-vue-next";
 import { useRoute } from "vue-router";
+import { ref } from "vue";
+
 const route = useRoute();
-console.log(route);
+
+const isMenuOpen = ref(false);
+
+const menuMobile = ref(null)
+
+const toggleMenu = () => {
+    console.log(menuMobile.value);
+    isMenuOpen.value = !isMenuOpen.value;
+    if(menuMobile.value) {
+        menuMobile.value.style.top = isMenuOpen.value ? "60px" : "999px";
+    }
+};
+
 </script>
 
 <template>
@@ -15,23 +29,23 @@ console.log(route);
             <span style="color: var(--background-buttons)">SCHWENGBER</span>
 
         </NuxtLink>
-        <div >
-            
+        <div class="hamburger">
+            <Menu @click="toggleMenu" />
         </div>
         <nav class="nav-links">
-            <li v-if="route.name !== 'blog'">
+            <li v-if="route.name !== 'Blog'">
                 <a href="#session-aboutus">SOBRE MIM</a>
             </li>
-            <li v-if="route.name !== 'blog'">
+            <li v-if="route.name !== 'Blog'">
                 <a href="#session-experiences">EXPERIÊNCIAS</a>
             </li>
-            <li v-if="route.name !== 'blog'">
+            <li v-if="route.name !== 'Blog'">
                 <a href="#session-projects">PROJETOS</a>
             </li>
-            <li v-if="route.name !== 'blog'">
+            <li v-if="route.name !== 'Blog'">
                 <a href="#session-contact">CONTATO</a>
             </li>
-            <li>
+            <li v-if="route.name !== 'Blog'">
                 <NuxtLink to="/blog">
                     BLOG
                 </NuxtLink>
@@ -57,6 +71,25 @@ console.log(route);
                 <Send />
             </a>
         </div>
+        <div class="container-menu-mobile" ref="menuMobile">
+            <li v-if="route.name !== 'Blog'">
+                <a href="#session-aboutus">SOBRE MIM</a>
+            </li>
+            <li v-if="route.name !== 'Blog'">
+                <a href="#session-experiences">EXPERIÊNCIAS</a>
+            </li>
+            <li v-if="route.name !== 'Blog'">
+                <a href="#session-projects">PROJETOS</a>
+            </li>
+            <li v-if="route.name !== 'Blog'">
+                <a href="#session-contact">CONTATO</a>
+            </li>
+            <li v-if="route.name !== 'Blog'">
+                <NuxtLink to="/blog">
+                    BLOG
+                </NuxtLink>
+            </li>
+        </div>
     </div>
 </template>
 <style scoped>
@@ -67,7 +100,9 @@ console.log(route);
     padding: 20px 50px;
     justify-content: space-between;
     height: 80px;
-    width: 80%;
+    width: 100%;  /* Deixe o container ocupar 100% da largura */
+    max-width: 1200px;  /* Tamanho máximo para evitar que o menu fique muito largo */
+    margin: 0 auto;  /* Centraliza o container */
     position: fixed;
     background: rgba(255, 255, 255, 0.06);
     border-radius: 16px;
@@ -75,6 +110,7 @@ console.log(route);
     backdrop-filter: blur(7.4px);
     -webkit-backdrop-filter: blur(7.4px);
     border: 1px solid rgba(255, 255, 255, 0.26);
+    z-index: 999;
 }
 
 .logo-container{
@@ -138,5 +174,62 @@ console.log(route);
 
 .contacts a:hover {
     color: var(--background-buttons);
+}
+
+.hamburger{
+    color: #FFF;
+    display: none;
+}
+
+.container-menu-mobile {
+    position: fixed;
+    top: -999px;
+    z-index: -1;
+    left: 0px;
+    width: 100%;
+    background-color: #000;
+    font-family: var(--secondary-font);
+    color: var(--text-principal);
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-menu-mobile li{
+    list-style: none;
+    background: transparent;
+    transition: color .2s ease-in;
+}
+.container-menu-mobile li a{
+    text-decoration: none;
+    color: var(--text-principal)
+}
+
+.container-menu-mobile li a:hover{
+    color: var(--background-buttons);
+}
+
+@media (max-width: 1100px) {
+    .nav-links {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .contacts {
+        display: none;
+    }
+    
+    .container-header {
+        max-width: 850px;
+    }
+    
+}
+
+@media (max-width: 425px) {
+    .container-header {
+        max-width: 350px;
+    }
 }
 </style>

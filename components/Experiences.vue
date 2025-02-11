@@ -148,4 +148,28 @@ import orcamenteiroLogo from "../../assets/images/logo-orcamenteiro.png";
     color: var(--text-secondary);
     font-size: 16px;
 }
+
+@media (max-width: 425px) {
+    .container-experiences {
+        padding: 0px 0px;
+    }
+
+    .container-text h2 {
+        font-size: 2rem;
+    }
+    
+    .card-experiences {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-image {
+        width: 150px;
+        height: 60px;
+    }
+
+    .container-descriptions{
+        width: 100%;
+    }
+}
 </style>

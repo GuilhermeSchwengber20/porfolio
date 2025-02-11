@@ -322,4 +322,56 @@ import { MoveRight } from 'lucide-vue-next';
     color: #fca5a5;
     background-color: #7f1d1d;;
 }
+
+
+@media (max-width: 425px) {
+    .container-text h2{
+        font-size: 2rem;
+    }
+
+    .card-project{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .container-image{
+        width: 100%;
+        height: 200px;
+    }
+
+   
+    .container-image .image {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #FFF;
+        border-radius: 12px;
+    }
+
+    .project-description {
+        width: 100%;
+    }
+    
+    .badges{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    
+    .description{
+        display: flex;
+        flex-direction: column;
+    }
+    .container-button {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+    }
+
+    .container-button button {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
 </style>

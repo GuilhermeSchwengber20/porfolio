@@ -2,18 +2,20 @@
 // import { useRoute } from "vue-router";
 // import { computed } from "vue";
 
-// const route = useRoute();
-// const postPath = computed(() => route.params.slug as string ?? '');
-// console.log(route.path);
-// const { data: post } = await useAsyncData(route.path, () => {
-//     return queryCollection("content").path(route.path).first();
-// })
-// console.log(post.value);
+const route = useRoute();
+const { data: post } = await useAsyncData(route.path, () => {
+    return queryCollection("blog").path(route.path).first();
+})
+console.log(post);
 </script>
 <template>
     <div class="container-page">
         <HeaderMenu />
-        <!-- <ContentRenderer :value="postPath.value"  /> -->
+        <div class="container-post">
+            <article class="markdown">
+                <ContentRenderer :value="post" v-if="post"/>
+            </article>
+        </div>
     </div>
 </template>
 <style scoped>
@@ -22,4 +24,11 @@
     background-color: var(--background-principal);
     scroll-behavior: smooth;
 }
+
+.container-post {
+    height: 100%;
+    padding-top: 120px;
+    overflow-y: auto;
+}
+
 </style>

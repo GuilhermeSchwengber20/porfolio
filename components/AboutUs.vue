@@ -94,4 +94,35 @@ import perfil from "../../assets/images/perfil-personagem.png"
 .purple {
     color: var(--background-buttons);
 }
+
+@media (max-width: 1100px) {
+    .container-image {
+        display: none;
+    }
+
+    .container-text{
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .container-about {
+        margin-top: 120px;
+        height: 60vh;
+    }
+
+    .container-text h2{
+        font-size: 2rem;
+    }
+
+    .container-button {
+        margin-top: 20px;
+    }
+
+    .container-button button {
+        padding: 15px 20px;
+        font-size: 14px;
+        outline: none;
+    }
+}
 </style>

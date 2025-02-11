@@ -15,3 +15,50 @@
     --principal-font: 'Inter', 'sans-serif';
     --secondary-font: 'Poppins';
 }
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+    margin-top: 30px; /* Espaço extra no topo dos títulos */
+    margin-bottom: 10px; /* Espaço extra abaixo dos títulos */
+}
+
+article.markdown ul li{
+    font-family: var(--principal-font);
+    color: var(--text-principal);
+}
+
+article.markdown a{
+    text-decoration: none;
+    font-family: var(--principal-font);
+    color: var(--text-principal);
+}
+
+
+article.markdown h1 {
+    font-family: var(--principal-font);
+    color: var(--text-principal);
+    font-size: 2rem;
+}
+
+
+article.markdown p{
+    font-family: var(--principal-font);
+    color: var(--text-secondary);
+}
+
+article.markdown pre {
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+  
+article.markdown code {
+    font-family: "Courier New", monospace;
+    padding: 2px 5px;
+    border-radius: 4px;
+}

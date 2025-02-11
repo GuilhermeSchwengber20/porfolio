@@ -8,10 +8,9 @@ useHead({
 });
 
 const { data: posts } = await useAsyncData("posts", () => {
-    return queryCollection('content').all()
+    return queryCollection('blog').all()
 })
-
-console.log(posts.value)
+console.log(posts);
 </script>
 
 <template>
@@ -30,7 +29,7 @@ console.log(posts.value)
                     </div>
                     <p class="post-description">{{ post.description }}</p>
                     <NuxtLink 
-                        :to="`blog${post.path}`" 
+                        :to="`${post.path}`" 
                         class="container-link-post"
                     >
                         <div class="link-post">
@@ -124,6 +123,48 @@ console.log(posts.value)
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+@media (max-width: 425px) {
+    .container-page {
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    .container-text {
+        width: 100%;
+    }
+
+    .container-text h2{
+        font-family: var(--principal-font);
+        color: var(--text-principal);
+        font-size: 2rem;
+    }
+
+    .content-posts {
+        width: 100%;
+        gap: 40px;
+    }
+
+    .card-post {
+        width: 100%;
+    }
+
+    .container-title-tag{
+        flex-wrap: wrap;
+    }
+
+    .post-title {
+        font-size: 18px;
+    }
+
+    .post-description{
+        margin-top: 10px;
+    }
+
+    .container-link-post{
+        margin-top: 10px;
+    }
 }
 
 </style>

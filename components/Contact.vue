@@ -151,8 +151,6 @@ const sendEmail = async () => {
     width: 100%;
 }
 
-
-
 .container-buttons button{
     width: 100%;
     padding: 10px 0px;
@@ -197,5 +195,25 @@ const sendEmail = async () => {
 
 a {
     text-decoration: none;
+}
+
+
+@media (max-width: 425px) {
+    .container-contact {
+        margin-top: 20px;
+    }
+    .container-text {
+        width: 100%;
+    }
+    .container-text h2 {
+        font-size: 2rem;
+    }
+
+    .content-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
 }
 </style>

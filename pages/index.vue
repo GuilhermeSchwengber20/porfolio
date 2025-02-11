@@ -13,4 +13,17 @@
     background-color: var(--background-principal);
     scroll-behavior: smooth;
 }
+
+@media (max-width: 1100px) {
+   .container-page {
+        padding: 10px 40px;
+    }
+}
+
+@media (max-width: 425px) {
+    .container-page {
+        padding: 10px 20px;
+        width: 100%;
+    }
+}
 </style>

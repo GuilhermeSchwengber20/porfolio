@@ -10,7 +10,6 @@ const isMenuOpen = ref(false);
 const menuMobile = ref(null)
 
 const toggleMenu = () => {
-    console.log(menuMobile.value);
     isMenuOpen.value = !isMenuOpen.value;
     if(menuMobile.value) {
         menuMobile.value.style.top = isMenuOpen.value ? "60px" : "999px";

@@ -115,7 +115,7 @@ import { MoveRight } from 'lucide-vue-next';
                             Lorem ipsum dolor sit amet, consectetur adipisicing
                         </p>
                         <div class="container-button">
-                            <button>
+                            <button aria-label="Preview">
                                 <MoveRight />
                             </button>
                         </div>
@@ -159,7 +159,7 @@ import { MoveRight } from 'lucide-vue-next';
                             Lorem ipsum dolor sit amet, consectetur adipisicing
                         </p>
                         <div class="container-button">
-                            <button>
+                            <button aria-label="Preview">
                                 <MoveRight />
                             </button>
                         </div>

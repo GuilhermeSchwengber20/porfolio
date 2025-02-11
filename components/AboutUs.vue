@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import perfil from "../../assets/images/perfil-personagem.png"
 
 </script>
 <template>
@@ -15,9 +14,12 @@ import perfil from "../../assets/images/perfil-personagem.png"
             </div>
         </div>
         <div class="container-image">
-            <div class="image">
-                <img :src="perfil" alt="Foto de Perfil de Guilherme Schwengber"/>
-            </div>
+            <NuxtImg
+                src="/perfil-personagem.png"
+                alt="Foto de Perfil de Guilherme Schwengber"
+                width="350"
+                height="350"
+            />
         </div>
     </div>
 </template>
@@ -45,8 +47,9 @@ import perfil from "../../assets/images/perfil-personagem.png"
 
 .container-text p{
     font-family: var(--principal-font);
-    color: var(--text-principal);
+    color: var(--text-secondary);
     font-weight: 300;
+    height: 200px;
 }
 
 .container-button {
@@ -74,22 +77,12 @@ import perfil from "../../assets/images/perfil-personagem.png"
 }
 
 .container-image {
-    width: 47%;
-    padding: 20px 30px;
-}
-
-.container-image .image {
-    max-width: 550px;
-    width: 100%;
+    width: 50%;
     height: 350px;
-    overflow: hidden;
+    padding-left: 90px;
 }
 
-.container-image .image img{
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
+
 
 .bold {
     color: #FFF;
@@ -124,6 +117,10 @@ import perfil from "../../assets/images/perfil-personagem.png"
         padding: 15px 20px;
         font-size: 14px;
         outline: none;
+    }
+
+    .container-text p {
+        height: auto;
     }
 }
 </style>

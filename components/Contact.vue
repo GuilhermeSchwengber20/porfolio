@@ -6,7 +6,7 @@ const description = ref('');
 
 const sendEmail = async () => {
     try {
-        const res = await $fetch("http://localhost:3030/send-email", {
+        await $fetch("http://localhost:3030/send-email", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -19,7 +19,6 @@ const sendEmail = async () => {
                 html: description.value,
             })
         })
-        console.log(res);
     } catch (error) {
         console.error(error);
     }

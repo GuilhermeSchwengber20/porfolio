@@ -13,7 +13,6 @@ useHead({
 const { data: posts } = await useAsyncData("posts", () => {
     return queryCollection('blog').all()
 })
-console.log(posts);
 </script>
 
 <template>

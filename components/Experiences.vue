@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-import bdsLogo from "../../assets/images/logo-bds.png";
-import orcamenteiroLogo from "../../assets/images/logo-orcamenteiro.png";
-</script>
 <template>
     <div class="container-experiences" id="session-experiences">
         <div class="container-text">
@@ -11,8 +7,8 @@ import orcamenteiroLogo from "../../assets/images/logo-orcamenteiro.png";
             <div class="card-experiences">
                 <div class="container-image">
                     <div class="image">
-                        <img
-                            :src="bdsLogo"
+                        <NuxtImg
+                            src="/logo-bds.png"
                             alt="Logo da empresa BDS informática"
                         />
                     </div>
@@ -34,8 +30,8 @@ import orcamenteiroLogo from "../../assets/images/logo-orcamenteiro.png";
             <div class="card-experiences">
                 <div class="container-image">
                     <div class="image">
-                        <img
-                            :src="bdsLogo"
+                        <NuxtImg
+                            src="/logo-bds.png"
                             alt="Logo da empresa BDS informática"
                         />
                     </div>
@@ -57,8 +53,8 @@ import orcamenteiroLogo from "../../assets/images/logo-orcamenteiro.png";
             <div class="card-experiences">
                 <div class="container-image">
                     <div class="image">
-                        <img
-                            :src="orcamenteiroLogo"
+                        <NuxtImg
+                            src="/logo-orcamenteiro.png"
                             alt="Logo da empresa orçamenteiro solar"
                         />
                     </div>

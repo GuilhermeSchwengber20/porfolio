@@ -1,12 +1,8 @@
 <script lang="ts" setup>
-// import { useRoute } from "vue-router";
-// import { computed } from "vue";
-
 const route = useRoute();
 const { data: post } = await useAsyncData(route.path, () => {
     return queryCollection("blog").path(route.path).first();
 })
-console.log(post);
 </script>
 <template>
     <div class="container-page">

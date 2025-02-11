@@ -15,7 +15,7 @@
         </div>
         <div class="container-image">
             <NuxtImg
-                src="/perfil-personagem.png"
+                src="/images/perfil-personagem.png"
                 alt="Foto de Perfil de Guilherme Schwengber"
                 width="350"
                 height="350"

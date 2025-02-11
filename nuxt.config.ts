@@ -10,6 +10,6 @@ export default defineNuxtConfig({
   },
   image: {
     format: ['webp'],
-    dir: 'public/images'
+    dir: 'public'
   },
 })

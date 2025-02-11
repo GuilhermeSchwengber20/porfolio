@@ -8,7 +8,7 @@
                 <div class="container-image">
                     <div class="image">
                         <NuxtImg
-                            src="/logo-bds.png"
+                            src="/images/logo-bds.png"
                             alt="Logo da empresa BDS informática"
                         />
                     </div>
@@ -31,7 +31,7 @@
                 <div class="container-image">
                     <div class="image">
                         <NuxtImg
-                            src="/logo-bds.png"
+                            src="/images/logo-bds.png"
                             alt="Logo da empresa BDS informática"
                         />
                     </div>
@@ -54,7 +54,7 @@
                 <div class="container-image">
                     <div class="image">
                         <NuxtImg
-                            src="/logo-orcamenteiro.png"
+                            src="/images/logo-orcamenteiro.png"
                             alt="Logo da empresa orçamenteiro solar"
                         />
                     </div>

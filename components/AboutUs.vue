@@ -17,7 +17,7 @@
             <NuxtImg
                 src="/images/perfil-personagem.png"
                 alt="Foto de Perfil de Guilherme Schwengber"
-                width="350"
+                width="450"
                 height="350"
             />
         </div>
